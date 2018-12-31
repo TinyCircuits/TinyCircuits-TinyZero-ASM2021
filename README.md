@@ -1,7 +1,7 @@
 # TinyCircuits TinyZero Processor Board
-# ASM2021 Rev4
+# ASM2021 Rev5
 
-These are the design files for the TinyCircuits ASM2021 Rev 4 PCB.  This is a Tiny processor board (Square Version, 20mm x 20mm) that uses the same microcontroller (Atmel ATSAMD21G18A) as the Arduino Zero and has stackable TinyShield support.  
+These are the design files for the TinyCircuits ASM2021 Rev 5 PCB.  This is a Tiny processor board (Square Version, 20mm x 20mm) that uses the same microcontroller (Atmel ATSAMD21G18A) as the Arduino Zero and has stackable TinyShield support.  
 
 Format is in Cadsoft Eagle format - Eagle version 6.2 was used for the original design.
 
