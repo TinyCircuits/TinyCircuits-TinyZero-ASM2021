@@ -1,3 +1,6 @@
 [submodule "libraries/libraries"]
 	path = libraries/libraries
 	url = https://github.com/TinyCircuits/libraries.git
+[submodule "libraries/BMA250-library"]
+	path = libraries/BMA250-library
+	url = https://github.com/TinyCircuits/BMA250-library.git
