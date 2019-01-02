@@ -5,11 +5,11 @@ These are the design files for the TinyCircuits ASM2021 Rev 5 PCB.  This is a Ti
 
 Format is in Cadsoft Eagle format - Eagle version 6.2 was used for the original design.
 
-For more infomation on this, check out the product page at Tiny-Circuits.com:  https://tinycircuits.com/products/tinyzero-processor
+For more infomation on this, check out the product page at TinyCircuits.com:  https://tinycircuits.com/products/tinyzero-processor
 
 
 
-#License:
+# License:
 
 Design by TinyCircuits.
 All design files are released under the Creative Commons Attribution Share-Alike 3.0 License, see the following link for details: http://creativecommons.org/licenses/by-sa/3.0
