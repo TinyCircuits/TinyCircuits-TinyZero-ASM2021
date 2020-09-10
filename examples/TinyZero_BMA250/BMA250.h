@@ -22,9 +22,16 @@ public:
 BMA250();
 int begin(uint8_t, uint8_t);
 void read();
+void setScale(uint8_t);
+void setInterval(uint8_t);
 int16_t X,Y,Z;
+float Xmss, Ymss, Zmss;
 int8_t rawTemp;
-int8_t tempC;
-uint8_t I2Caddress=0;
+float tempC;
+uint8_t I2Caddress = 0;
+float maxMpSS; //max meters per second squared
+int interval = 0;
+unsigned long newRead = 0;
+bool newReadAvailable();
 };
 #endif
