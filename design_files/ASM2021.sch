@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="6.3">
+<eagle version="9.6.2">
 <drawing>
 <settings>
-<setting alwaysvectorfont="yes"/>
+<setting alwaysvectorfont="no"/>
+<setting keepoldvectorfont="yes"/>
 <setting verticaltext="up"/>
 </settings>
 <grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
@@ -63,6 +64,11 @@
 <layer number="53" name="tGND_GNDA" color="7" fill="1" visible="no" active="no"/>
 <layer number="54" name="bGND_GNDA" color="7" fill="1" visible="no" active="no"/>
 <layer number="56" name="wert" color="7" fill="1" visible="no" active="no"/>
+<layer number="57" name="tCAD" color="7" fill="1" visible="no" active="no"/>
+<layer number="58" name="bCAD" color="7" fill="1" visible="no" active="no"/>
+<layer number="59" name="Invisible" color="7" fill="1" visible="no" active="no"/>
+<layer number="61" name="stand" color="7" fill="1" visible="no" active="no"/>
+<layer number="90" name="Modules" color="5" fill="1" visible="yes" active="yes"/>
 <layer number="91" name="Nets" color="2" fill="1" visible="yes" active="yes"/>
 <layer number="92" name="Busses" color="1" fill="1" visible="yes" active="yes"/>
 <layer number="93" name="Pins" color="2" fill="1" visible="no" active="yes"/>
@@ -71,6 +77,7 @@
 <layer number="96" name="Values" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="97" name="Info" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="98" name="Guide" color="6" fill="1" visible="yes" active="yes"/>
+<layer number="99" name="SpiceOrder" color="5" fill="1" visible="no" active="no"/>
 <layer number="100" name="Muster" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="101" name="Patch_Top" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="102" name="Vscore" color="7" fill="1" visible="yes" active="yes"/>
@@ -84,7 +91,14 @@
 <layer number="110" name="fp0" color="7" fill="1" visible="no" active="yes"/>
 <layer number="111" name="LPC17xx" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="112" name="tSilk" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="113" name="HENWAY_PKG" color="12" fill="1" visible="yes" active="yes"/>
+<layer number="114" name="50_Electronics_Plate" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="115" name="henwayRES" color="5" fill="1" visible="yes" active="yes"/>
 <layer number="116" name="Patch_BOT" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="117" name="mPads" color="7" fill="1" visible="no" active="no"/>
+<layer number="118" name="mVias" color="7" fill="1" visible="no" active="no"/>
+<layer number="119" name="mUnrouted" color="7" fill="1" visible="no" active="no"/>
+<layer number="120" name="mDimension" color="7" fill="1" visible="no" active="no"/>
 <layer number="121" name="_tsilk" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="122" name="_bsilk" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="123" name="tTestmark" color="7" fill="1" visible="no" active="yes"/>
@@ -93,11 +107,43 @@
 <layer number="126" name="_bNames" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="127" name="_tValues" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="128" name="_bValues" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="129" name="mtStop" color="7" fill="1" visible="no" active="no"/>
+<layer number="130" name="mbStop" color="7" fill="1" visible="no" active="no"/>
 <layer number="131" name="tAdjust" color="7" fill="1" visible="no" active="yes"/>
 <layer number="132" name="bAdjust" color="7" fill="1" visible="no" active="yes"/>
+<layer number="133" name="mtFinish" color="7" fill="1" visible="no" active="no"/>
+<layer number="134" name="mbFinish" color="7" fill="1" visible="no" active="no"/>
+<layer number="135" name="mtGlue" color="7" fill="1" visible="no" active="no"/>
+<layer number="136" name="mbGlue" color="7" fill="1" visible="no" active="no"/>
+<layer number="137" name="mtTest" color="7" fill="1" visible="no" active="no"/>
+<layer number="138" name="mbTest" color="7" fill="1" visible="no" active="no"/>
+<layer number="139" name="mtKeepout" color="7" fill="1" visible="no" active="no"/>
+<layer number="140" name="mbKeepout" color="7" fill="1" visible="no" active="no"/>
+<layer number="141" name="mtRestrict" color="7" fill="1" visible="no" active="no"/>
+<layer number="142" name="mbRestrict" color="7" fill="1" visible="no" active="no"/>
+<layer number="143" name="mvRestrict" color="7" fill="1" visible="no" active="no"/>
 <layer number="144" name="Drill_legend" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="145" name="mHoles" color="7" fill="1" visible="no" active="no"/>
+<layer number="146" name="mMilling" color="7" fill="1" visible="no" active="no"/>
+<layer number="147" name="mMeasures" color="7" fill="1" visible="no" active="no"/>
+<layer number="148" name="mDocument" color="7" fill="1" visible="no" active="no"/>
+<layer number="149" name="mReference" color="7" fill="1" visible="no" active="no"/>
+<layer number="150" name="Notes" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="151" name="HeatSink" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="152" name="_bDocu" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="153" name="FabDoc1" color="6" fill="1" visible="no" active="no"/>
+<layer number="154" name="FabDoc2" color="2" fill="1" visible="no" active="no"/>
+<layer number="155" name="FabDoc3" color="7" fill="15" visible="no" active="no"/>
+<layer number="156" name="bCapacitor" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="157" name="tResistor" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="158" name="bResistor" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="159" name="henwayCAP" color="13" fill="1" visible="yes" active="yes"/>
+<layer number="191" name="mNets" color="7" fill="1" visible="no" active="no"/>
+<layer number="192" name="mBusses" color="7" fill="1" visible="no" active="no"/>
+<layer number="193" name="mPins" color="7" fill="1" visible="no" active="no"/>
+<layer number="194" name="mSymbols" color="7" fill="1" visible="no" active="no"/>
+<layer number="195" name="mNames" color="7" fill="1" visible="no" active="no"/>
+<layer number="196" name="mValues" color="7" fill="1" visible="no" active="no"/>
 <layer number="199" name="Contour" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="200" name="200bmp" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="201" name="201bmp" color="7" fill="1" visible="yes" active="yes"/>
@@ -124,11 +170,15 @@
 <layer number="222" name="222bmp" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="223" name="223bmp" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="224" name="224bmp" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="231" name="Eagle3D_PG1" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="232" name="Eagle3D_PG2" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="233" name="Eagle3D_PG3" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="248" name="Housing" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="249" name="Edge" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="250" name="Descript" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="251" name="SMDround" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="254" name="cooling" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="255" name="PART_" color="7" fill="1" visible="yes" active="yes"/>
 </layers>
 <schematic xreflabel="%F%N/%S.%C%R" xrefpart="/%S.%C%R">
 <libraries>
@@ -272,8 +322,8 @@
 <rectangle x1="-3.3797" y1="-1.9659" x2="-2.1097" y2="-1.7627" layer="51" rot="R90"/>
 <rectangle x1="-3.8852" y1="-1.9659" x2="-2.6152" y2="-1.7627" layer="51" rot="R90"/>
 <rectangle x1="-4.3855" y1="-1.9659" x2="-3.1155" y2="-1.7627" layer="51" rot="R90"/>
-<hole x="-4.8" y="1.5" drill="0.6"/>
-<hole x="4.8" y="1.5" drill="0.6"/>
+<hole x="-4.8" y="1.5" drill="0.65"/>
+<hole x="4.8" y="1.5" drill="0.65"/>
 <circle x="-3.8" y="-3" radius="0.127" width="0.127" layer="51"/>
 <polygon width="0.127" layer="29">
 <vertex x="-5.5626" y="1.4986" curve="90"/>
@@ -319,6 +369,18 @@
 <rectangle x1="2.6378" y1="-2.5034" x2="2.8578" y2="-1.2034" layer="31"/>
 <rectangle x1="3.1378" y1="-2.5034" x2="3.3578" y2="-1.2034" layer="31"/>
 <rectangle x1="3.6378" y1="-2.5034" x2="3.8578" y2="-1.2034" layer="31"/>
+<polygon width="0.127" layer="30">
+<vertex x="-5.5626" y="1.4986" curve="90"/>
+<vertex x="-4.8006" y="0.7366" curve="90"/>
+<vertex x="-4.0386" y="1.4986" curve="90"/>
+<vertex x="-4.8006" y="2.2606" curve="90"/>
+</polygon>
+<polygon width="0.127" layer="30">
+<vertex x="4.0386" y="1.4986" curve="90"/>
+<vertex x="4.8006" y="0.7366" curve="90"/>
+<vertex x="5.5626" y="1.4986" curve="90"/>
+<vertex x="4.8006" y="2.2606" curve="90"/>
+</polygon>
 </package>
 <package name="SOD-123FL">
 <wire x1="1.778" y1="0.635" x2="-1.8034" y2="0.635" width="0.1016" layer="51"/>
@@ -328,7 +390,7 @@
 <wire x1="0.7032" y1="-0.6" x2="0.7032" y2="0.6" width="0.2032" layer="21"/>
 <smd name="C" x="-1.6383" y="0" dx="0.9144" dy="1.2192" layer="1"/>
 <smd name="A" x="1.6383" y="0" dx="0.9144" dy="1.2192" layer="1"/>
-<text x="0" y="0" size="0.381" layer="25" align="center">&gt;NAME</text>
+<text x="0" y="0" size="1.016" layer="25" align="center">&gt;NAME</text>
 <rectangle x1="-1.0414" y1="-0.7874" x2="-0.4318" y2="0.7874" layer="21"/>
 <wire x1="-1.8034" y1="0.635" x2="-1.8034" y2="-0.635" width="0.1016" layer="51"/>
 <wire x1="1.778" y1="0.635" x2="1.778" y2="-0.635" width="0.1016" layer="51"/>
@@ -475,7 +537,7 @@ Source: http://v4.cypress.com/cfuploads/img/products/cywusb6934.pdf</description
 <smd name="1" x="2.66" y="1.3" dx="1.38" dy="0.45" layer="1" rot="R180"/>
 <smd name="5" x="2.66" y="-1.3" dx="1.38" dy="0.45" layer="1" rot="R180"/>
 <smd name="P1" x="2.3" y="-2.4625" dx="1.475" dy="2.1" layer="1" rot="R90"/>
-<text x="0" y="0" size="0.635" layer="25" rot="R90" align="center">&gt;NAME</text>
+<text x="0" y="0" size="1.27" layer="25" rot="R90" align="center">&gt;NAME</text>
 <wire x1="-1.45" y1="3.24" x2="2.59" y2="3.24" width="0.127" layer="51"/>
 <wire x1="2.59" y1="3.24" x2="2.62" y2="-3.25" width="0.127" layer="51"/>
 <wire x1="2.62" y1="-3.25" x2="-1.45" y2="-3.25" width="0.127" layer="51"/>
@@ -516,7 +578,6 @@ Source: http://v4.cypress.com/cfuploads/img/products/cywusb6934.pdf</description
 </package>
 <package name="TEST_POINT_1MM">
 <smd name="P$1" x="0" y="0" dx="1" dy="1" layer="1" roundness="100" cream="no"/>
-<text x="0" y="0" size="0.75" layer="25" align="center">&gt;NAME</text>
 </package>
 <package name="TEST_POINT_2MM">
 <smd name="P$1" x="0" y="0" dx="2" dy="2" layer="1" roundness="100" cream="no"/>
@@ -583,6 +644,19 @@ Source: http://v4.cypress.com/cfuploads/img/products/cywusb6934.pdf</description
 <wire x1="1.3" y1="-2.8" x2="1.3" y2="-1.3" width="0.127" layer="51"/>
 <text x="0" y="0" size="1.524" layer="25" align="center">&gt;NAME</text>
 </package>
+<package name="SOT23A">
+<wire x1="1.4224" y1="0.6604" x2="1.4224" y2="-0.6604" width="0.1524" layer="51"/>
+<wire x1="1.4224" y1="-0.6604" x2="-1.4224" y2="-0.6604" width="0.1524" layer="51"/>
+<wire x1="-1.4224" y1="-0.6604" x2="-1.4224" y2="0.6604" width="0.1524" layer="51"/>
+<wire x1="-1.4224" y1="0.6604" x2="1.4224" y2="0.6604" width="0.1524" layer="51"/>
+<smd name="C" x="0" y="1.1" dx="0.6" dy="1" layer="1"/>
+<smd name="E" x="0.95" y="-1.1" dx="0.6" dy="1" layer="1"/>
+<smd name="B" x="-0.95" y="-1.1" dx="0.6" dy="1" layer="1"/>
+<text x="0" y="0" size="0.635" layer="25" align="center">&gt;NAME</text>
+<rectangle x1="-0.2286" y1="0.7112" x2="0.2286" y2="1.2954" layer="51"/>
+<rectangle x1="0.7112" y1="-1.2954" x2="1.1684" y2="-0.7112" layer="51"/>
+<rectangle x1="-1.1684" y1="-1.2954" x2="-0.7112" y2="-0.7112" layer="51"/>
+</package>
 <package name="MICRO_USB_ALT">
 <smd name="P3" x="0" y="2.75" dx="1.9" dy="2.1" layer="1"/>
 <smd name="P5" x="0" y="0.8375" dx="1.9" dy="1.175" layer="1"/>
@@ -595,7 +669,7 @@ Source: http://v4.cypress.com/cfuploads/img/products/cywusb6934.pdf</description
 <smd name="1" x="2.66" y="1.3" dx="1.38" dy="0.45" layer="1" rot="R180"/>
 <smd name="5" x="2.66" y="-1.3" dx="1.38" dy="0.45" layer="1" rot="R180"/>
 <smd name="P1" x="2.3" y="-2.8" dx="2" dy="2.1" layer="1" rot="R90"/>
-<text x="0" y="0" size="0.635" layer="25" rot="R90" align="center">&gt;NAME</text>
+<text x="0" y="0" size="1.27" layer="25" rot="R90" align="center">&gt;NAME</text>
 <wire x1="-2" y1="3.85" x2="3.1" y2="3.85" width="0.127" layer="51"/>
 <wire x1="3.1" y1="3.85" x2="3.1" y2="-3.85" width="0.127" layer="51"/>
 <wire x1="3.1" y1="-3.85" x2="-2" y2="-3.85" width="0.127" layer="51"/>
@@ -11279,7 +11353,7 @@ Source: http://v4.cypress.com/cfuploads/img/products/cywusb6934.pdf</description
 </device>
 </devices>
 </deviceset>
-<deviceset name="AS-ITM-00009" prefix="D">
+<deviceset name="AS-ITM-00009" prefix="D" uservalue="yes">
 <description>Diodes (General Purpose, Power, Switching) IO=150mA VR=75V HIGH SPEED</description>
 <gates>
 <gate name="G$1" symbol="D" x="0" y="0"/>
@@ -11293,6 +11367,7 @@ Source: http://v4.cypress.com/cfuploads/img/products/cywusb6934.pdf</description
 <technologies>
 <technology name="">
 <attribute name="PARTNO" value="AS-ITM-00009" constant="no"/>
+<attribute name="PNPROTATION" value="0" constant="no"/>
 <attribute name="VALUE" value="CD0603" constant="no"/>
 </technology>
 </technologies>
@@ -11376,6 +11451,7 @@ Source: http://v4.cypress.com/cfuploads/img/products/cywusb6934.pdf</description
 <technologies>
 <technology name="">
 <attribute name="PARTNO" value="AS-ITM-00015" constant="no"/>
+<attribute name="PNPROTATION" value="0" constant="no"/>
 <attribute name="VALUE" value="DF12-32-DP" constant="no"/>
 </technology>
 </technologies>
@@ -11396,7 +11472,7 @@ Source: http://v4.cypress.com/cfuploads/img/products/cywusb6934.pdf</description
 </device>
 </devices>
 </deviceset>
-<deviceset name="AS-ITM-00111" prefix="D">
+<deviceset name="AS-ITM-00111" prefix="D" uservalue="yes">
 <description>DIODE SCHOTTKY 20V 1A SOD123L</description>
 <gates>
 <gate name="G$1" symbol="D" x="0" y="0"/>
@@ -11410,13 +11486,14 @@ Source: http://v4.cypress.com/cfuploads/img/products/cywusb6934.pdf</description
 <technologies>
 <technology name="">
 <attribute name="PARTNO" value="AS-ITM-00111" constant="no"/>
+<attribute name="PNPROTATION" value="0" constant="no"/>
 <attribute name="VALUE" value="MBR120VLSFT1G" constant="no"/>
 </technology>
 </technologies>
 </device>
 </devices>
 </deviceset>
-<deviceset name="AS-ITM-00024" prefix="Q">
+<deviceset name="AS-ITM-00024" prefix="Q" uservalue="yes">
 <description>P-Channel MOSFET SOT-23</description>
 <gates>
 <gate name="G$1" symbol="P-FET" x="0" y="0"/>
@@ -11431,6 +11508,21 @@ Source: http://v4.cypress.com/cfuploads/img/products/cywusb6934.pdf</description
 <technologies>
 <technology name="">
 <attribute name="PARTNO" value="AS-ITM-00024" constant="no"/>
+<attribute name="PNPROTATION" value="0" constant="no"/>
+<attribute name="VALUE" value="DMP2035U" constant="no"/>
+</technology>
+</technologies>
+</device>
+<device name="A" package="SOT23A">
+<connects>
+<connect gate="G$1" pin="D" pad="C"/>
+<connect gate="G$1" pin="G" pad="B"/>
+<connect gate="G$1" pin="S" pad="E"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="PARTNO" value="AS-ITM-00024" constant="no"/>
+<attribute name="PNPROTATION" value="0" constant="no"/>
 <attribute name="VALUE" value="DMP2035U" constant="no"/>
 </technology>
 </technologies>
@@ -11453,6 +11545,7 @@ Source: http://v4.cypress.com/cfuploads/img/products/cywusb6934.pdf</description
 <technologies>
 <technology name="">
 <attribute name="PARTNO" value="AS-ITM-00220" constant="no"/>
+<attribute name="PNPROTATION" value="0" constant="no"/>
 <attribute name="VALUE" value="PCM12SMTR" constant="no"/>
 </technology>
 </technologies>
@@ -11490,6 +11583,7 @@ Source: http://v4.cypress.com/cfuploads/img/products/cywusb6934.pdf</description
 <technologies>
 <technology name="">
 <attribute name="PARTNO" value="AS-ITM-00136" constant="no"/>
+<attribute name="PNPROTATION" value="270" constant="no"/>
 <attribute name="VALUE" value="MCP73831 " constant="no"/>
 </technology>
 </technologies>
@@ -11629,6 +11723,7 @@ Source: http://v4.cypress.com/cfuploads/img/products/cywusb6934.pdf</description
 <technologies>
 <technology name="">
 <attribute name="PARTNO" value="AS-ITM-00021" constant="no"/>
+<attribute name="PNPROTATION" value="90" constant="no"/>
 <attribute name="VALUE" value="10118192-0001LF" constant="no"/>
 </technology>
 </technologies>
@@ -11767,6 +11862,7 @@ Source: http://v4.cypress.com/cfuploads/img/products/cywusb6934.pdf</description
 <technologies>
 <technology name="">
 <attribute name="PARTNO" value="AS-ITM-00070" constant="no"/>
+<attribute name="PNPROTATION" value="90" constant="no"/>
 <attribute name="VALUE" value="BMA250" constant="no"/>
 </technology>
 </technologies>
@@ -11933,7 +12029,7 @@ Source: http://v4.cypress.com/cfuploads/img/products/cywusb6934.pdf</description
 <attribute name="VALUE" value="10uF"/>
 </part>
 <part name="J3" library="tinycircuits" deviceset="AS-ITM-00044" device="" value="961102"/>
-<part name="U4" library="tinycircuits" deviceset="AS-ITM-00070" device="" value="BMA250"/>
+<part name="U4" library="tinycircuits" deviceset="AS-ITM-00070" device="" value="BMA250E"/>
 <part name="C12" library="tinycircuits" deviceset="AS-ITM-00008" device="" value=".1uF">
 <attribute name="PARTNO" value="AS-ITM-00008"/>
 <attribute name="VALUE" value="0.1uF"/>
@@ -11950,7 +12046,7 @@ Source: http://v4.cypress.com/cfuploads/img/products/cywusb6934.pdf</description
 <attribute name="PARTNO" value="AS-ITM-00005"/>
 <attribute name="VALUE" value="1.00M"/>
 </part>
-<part name="J7" library="tinycircuits" deviceset="TEST_POINT" device=""/>
+<part name="GND17" library="tinycircuits" deviceset="GND" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -11962,7 +12058,7 @@ Source: http://v4.cypress.com/cfuploads/img/products/cywusb6934.pdf</description
 <text x="95.504" y="180.594" size="3.81" layer="94" font="vector">LED</text>
 <text x="340.868" y="17.272" size="3.556" layer="94" font="vector">TinyZero Processor Board</text>
 <text x="327.152" y="6.35" size="3.556" layer="94" font="vector">AS-SCH-ASM2021</text>
-<text x="416.56" y="6.858" size="3.556" layer="94" font="vector">4</text>
+<text x="416.56" y="6.858" size="3.556" layer="94" font="vector">5</text>
 <text x="45.72" y="35.56" size="3.048" layer="91">Released under the Creative Commons Attribution Share-Alike 3.0 License</text>
 <text x="45.72" y="30.48" size="3.048" layer="91">http://creativecommons.org/licenses/by-sa/3.0</text>
 <text x="45.72" y="20.32" size="3.048" layer="91">Original Arduino Uno Design by Team Arduino</text>
@@ -11971,26 +12067,41 @@ Source: http://v4.cypress.com/cfuploads/img/products/cywusb6934.pdf</description
 <text x="106.68" y="243.84" size="3.81" layer="94" font="vector">Lithium Battery Charger</text>
 <text x="198.12" y="243.84" size="3.81" layer="94" font="vector">Battery Connections</text>
 <text x="38.1" y="243.84" size="3.81" layer="94" font="vector">USB</text>
-<text x="302.26" y="109.22" size="3.81" layer="94" font="vector">BMA250 Accelerometer</text>
+<text x="302.26" y="109.22" size="3.81" layer="94" font="vector">BMA250E Accelerometer</text>
 <text x="34.544" y="180.594" size="3.81" layer="94" font="vector">Connections</text>
-<text x="35.56" y="63.5" size="1.778" layer="97">Non Populated: C12, U4</text>
+<text x="35.56" y="63.5" size="1.778" layer="97">Non Populated: U4</text>
 <text x="35.56" y="60.96" size="1.778" layer="97">Hand Populated: -</text>
 <text x="35.56" y="58.42" size="1.778" layer="97">Hand Soldered: -</text>
 <text x="35.56" y="55.88" size="1.778" layer="97">Notes: -</text>
 <text x="35.56" y="66.04" size="1.778" layer="97">Variant: Standard - R</text>
+<text x="76.2" y="63.5" size="1.778" layer="97">Non Populated: -</text>
+<text x="76.2" y="60.96" size="1.778" layer="97">Hand Populated: -</text>
+<text x="76.2" y="58.42" size="1.778" layer="97">Hand Soldered: -</text>
+<text x="76.2" y="55.88" size="1.778" layer="97">Notes: -</text>
+<text x="76.2" y="66.04" size="1.778" layer="97">Variant: Accelerometer - R-A</text>
+<circle x="44.196" y="147.32" radius="1.48081875" width="0.254" layer="94"/>
+<wire x1="48.26" y1="147.32" x2="45.72" y2="147.32" width="0.1524" layer="94"/>
 </plain>
 <instances>
-<instance part="J6" gate="G$1" x="337.82" y="152.4">
+<instance part="J6" gate="G$1" x="337.82" y="152.4" smashed="yes">
 <attribute name="PARTNO" x="337.82" y="152.4" size="1.778" layer="96" display="off"/>
+<attribute name="NAME" x="332.74" y="173.99" size="1.778" layer="95"/>
+<attribute name="VALUE" x="332.74" y="127" size="1.778" layer="96"/>
 </instance>
-<instance part="GND1" gate="1" x="147.32" y="139.7"/>
-<instance part="GND3" gate="1" x="121.92" y="88.9"/>
+<instance part="GND1" gate="1" x="139.7" y="139.7" smashed="yes">
+<attribute name="VALUE" x="137.16" y="137.16" size="1.778" layer="96"/>
+</instance>
+<instance part="GND3" gate="1" x="121.92" y="88.9" smashed="yes">
+<attribute name="VALUE" x="119.38" y="86.36" size="1.778" layer="96"/>
+</instance>
 <instance part="C8" gate="G$1" x="121.92" y="99.06" smashed="yes" rot="MR0">
 <attribute name="NAME" x="118.618" y="98.679" size="1.778" layer="95" rot="MR0"/>
 <attribute name="VALUE" x="118.618" y="96.647" size="1.778" layer="96" rot="MR0"/>
 <attribute name="PARTNO" x="121.92" y="99.06" size="1.778" layer="96" rot="MR0" display="off"/>
 </instance>
-<instance part="GND4" gate="1" x="172.72" y="116.84"/>
+<instance part="GND4" gate="1" x="165.1" y="116.84" smashed="yes">
+<attribute name="VALUE" x="162.56" y="114.3" size="1.778" layer="96"/>
+</instance>
 <instance part="+5V" gate="1" x="274.32" y="233.68" smashed="yes">
 <attribute name="VALUE" x="276.86" y="236.22" size="1.778" layer="96" rot="R180"/>
 </instance>
@@ -12002,7 +12113,9 @@ Source: http://v4.cypress.com/cfuploads/img/products/cywusb6934.pdf</description
 <attribute name="VALUE" x="272.796" y="210.82" size="1.778" layer="96" rot="R180"/>
 <attribute name="PARTNO" x="274.32" y="210.82" size="1.778" layer="96" rot="R90" display="off"/>
 </instance>
-<instance part="GND5" gate="1" x="274.32" y="200.66"/>
+<instance part="GND5" gate="1" x="274.32" y="200.66" smashed="yes">
+<attribute name="VALUE" x="271.78" y="198.12" size="1.778" layer="96"/>
+</instance>
 <instance part="+5V1" gate="1" x="378.46" y="180.34" smashed="yes">
 <attribute name="VALUE" x="381" y="182.88" size="1.778" layer="96" rot="R180"/>
 </instance>
@@ -12015,7 +12128,9 @@ Source: http://v4.cypress.com/cfuploads/img/products/cywusb6934.pdf</description
 <instance part="+3V3" gate="G$1" x="373.38" y="175.26" smashed="yes">
 <attribute name="VALUE" x="375.92" y="177.8" size="1.778" layer="96" rot="R180"/>
 </instance>
-<instance part="GND7" gate="1" x="370.84" y="149.86"/>
+<instance part="GND7" gate="1" x="370.84" y="149.86" smashed="yes">
+<attribute name="VALUE" x="368.3" y="147.32" size="1.778" layer="96"/>
+</instance>
 <instance part="R5" gate="G$1" x="43.18" y="96.52" smashed="yes" rot="R90">
 <attribute name="NAME" x="44.958" y="97.0026" size="1.778" layer="95"/>
 <attribute name="VALUE" x="44.958" y="94.488" size="1.778" layer="96"/>
@@ -12031,7 +12146,9 @@ Source: http://v4.cypress.com/cfuploads/img/products/cywusb6934.pdf</description
 <attribute name="VALUE" x="105.41" y="160.02" size="1.778" layer="96"/>
 <attribute name="PARTNO" x="103.632" y="161.798" size="1.778" layer="96" rot="R90" display="off"/>
 </instance>
-<instance part="GND9" gate="1" x="103.632" y="141.478"/>
+<instance part="GND9" gate="1" x="103.632" y="141.478" smashed="yes">
+<attribute name="VALUE" x="101.092" y="138.938" size="1.778" layer="96"/>
+</instance>
 <instance part="D3" gate="G$1" x="103.632" y="151.638" smashed="yes">
 <attribute name="NAME" x="106.172" y="150.876" size="1.778" layer="95"/>
 <attribute name="VALUE" x="106.172" y="148.463" size="1.778" layer="96"/>
@@ -12042,62 +12159,122 @@ Source: http://v4.cypress.com/cfuploads/img/products/cywusb6934.pdf</description
 <attribute name="NAME" x="380.492" y="218.059" size="1.778" layer="95" rot="MR0"/>
 <attribute name="VALUE" x="380.492" y="216.027" size="1.778" layer="96" rot="MR0"/>
 </instance>
-<instance part="FRAME1" gate="G$2" x="322.58" y="0"/>
-<instance part="FRAME1" gate="G$1" x="0" y="0"/>
+<instance part="FRAME1" gate="G$2" x="322.58" y="0" smashed="yes">
+<attribute name="LAST_DATE_TIME" x="335.301590625" y="1.242059375" size="2.54" layer="94" font="vector"/>
+<attribute name="SHEET" x="408.961590625" y="1.242059375" size="2.54" layer="94" font="vector"/>
+</instance>
+<instance part="FRAME1" gate="G$1" x="0" y="0" smashed="yes"/>
 <instance part="D1" gate="G$1" x="302.26" y="218.44" smashed="yes" rot="R90">
 <attribute name="NAME" x="300.2534" y="217.17" size="1.778" layer="95" rot="R90"/>
 <attribute name="VALUE" x="306.0954" y="214.122" size="1.778" layer="96" rot="R90"/>
 </instance>
-<instance part="GND11" gate="1" x="383.54" y="203.2"/>
-<instance part="Q1" gate="G$1" x="289.56" y="218.44" rot="R90"/>
-<instance part="SW1" gate="G$1" x="317.5" y="228.6" rot="R180"/>
+<instance part="GND11" gate="1" x="383.54" y="203.2" smashed="yes">
+<attribute name="VALUE" x="381" y="200.66" size="1.778" layer="96"/>
+</instance>
+<instance part="Q1" gate="G$1" x="289.56" y="218.44" smashed="yes" rot="R90">
+<attribute name="VALUE" x="289.56" y="207.01" size="1.778" layer="96" rot="R90"/>
+<attribute name="NAME" x="287.02" y="207.01" size="1.778" layer="95" rot="R90"/>
+</instance>
+<instance part="SW1" gate="G$1" x="317.5" y="228.6" smashed="yes" rot="R180">
+<attribute name="NAME" x="325.12" y="218.44" size="1.778" layer="95" rot="R180" align="top-left"/>
+<attribute name="VALUE" x="309.88" y="236.22" size="1.778" layer="96" rot="R180" align="bottom-right"/>
+</instance>
 <instance part="C9" gate="G$1" x="134.62" y="99.06" smashed="yes" rot="MR0">
 <attribute name="NAME" x="131.318" y="98.679" size="1.778" layer="95" rot="MR0"/>
 <attribute name="VALUE" x="131.318" y="96.647" size="1.778" layer="96" rot="MR0"/>
 <attribute name="PARTNO" x="134.62" y="99.06" size="1.778" layer="96" rot="MR0" display="off"/>
 </instance>
-<instance part="GND8" gate="1" x="320.04" y="200.66"/>
-<instance part="U2" gate="G$1" x="149.86" y="215.9"/>
+<instance part="GND8" gate="1" x="320.04" y="200.66" smashed="yes">
+<attribute name="VALUE" x="317.5" y="198.12" size="1.778" layer="96"/>
+</instance>
+<instance part="U2" gate="G$1" x="149.86" y="215.9" smashed="yes">
+<attribute name="NAME" x="142.24" y="228.6" size="1.778" layer="95" align="top-left"/>
+<attribute name="VALUE" x="157.48" y="203.2" size="1.778" layer="96" align="bottom-right"/>
+</instance>
 <instance part="+5V2" gate="1" x="106.68" y="228.6" smashed="yes">
 <attribute name="VALUE" x="109.22" y="231.14" size="1.778" layer="96" rot="R180"/>
 </instance>
 <instance part="VBATT3" gate="VBATT" x="170.18" y="228.6" smashed="yes">
 <attribute name="VALUE" x="175.26" y="231.14" size="1.778" layer="96" rot="R180"/>
 </instance>
-<instance part="R1" gate="G$1" x="170.18" y="215.9"/>
-<instance part="GND12" gate="1" x="177.8" y="203.2"/>
-<instance part="J2" gate="G$1" x="218.44" y="215.9" rot="MR0"/>
+<instance part="R1" gate="G$1" x="170.18" y="215.9" smashed="yes">
+<attribute name="NAME" x="170.18" y="217.3986" size="1.778" layer="95" align="bottom-center"/>
+<attribute name="VALUE" x="170.18" y="212.598" size="1.778" layer="96" align="bottom-center"/>
+</instance>
+<instance part="GND12" gate="1" x="177.8" y="203.2" smashed="yes">
+<attribute name="VALUE" x="175.26" y="200.66" size="1.778" layer="96"/>
+</instance>
+<instance part="J2" gate="G$1" x="218.44" y="215.9" smashed="yes" rot="MR0">
+<attribute name="NAME" x="223.52" y="222.25" size="1.778" layer="95" rot="MR0"/>
+<attribute name="VALUE" x="223.52" y="210.82" size="1.778" layer="96" rot="MR0"/>
+</instance>
 <instance part="VBATT4" gate="VBATT" x="231.14" y="236.22" smashed="yes">
 <attribute name="VALUE" x="236.22" y="238.76" size="1.778" layer="96" rot="R180"/>
 </instance>
-<instance part="GND13" gate="1" x="231.14" y="203.2"/>
-<instance part="C4" gate="G$1" x="106.68" y="215.9" rot="MR0">
+<instance part="GND13" gate="1" x="231.14" y="203.2" smashed="yes">
+<attribute name="VALUE" x="228.6" y="200.66" size="1.778" layer="96"/>
+</instance>
+<instance part="C4" gate="G$1" x="106.68" y="215.9" smashed="yes" rot="MR0">
 <attribute name="PARTNO" x="106.68" y="215.9" size="1.778" layer="96" rot="MR0" display="off"/>
+<attribute name="NAME" x="105.664" y="216.535" size="1.778" layer="95" rot="MR0"/>
+<attribute name="VALUE" x="105.664" y="211.709" size="1.778" layer="96" rot="MR0"/>
 </instance>
-<instance part="GND14" gate="1" x="106.68" y="203.2"/>
-<instance part="D2" gate="G$1" x="116.84" y="208.28" rot="R90">
+<instance part="GND14" gate="1" x="106.68" y="203.2" smashed="yes">
+<attribute name="VALUE" x="104.14" y="200.66" size="1.778" layer="96"/>
+</instance>
+<instance part="D2" gate="G$1" x="116.84" y="208.28" smashed="yes" rot="R90">
 <attribute name="PARTNO" x="116.84" y="208.28" size="1.778" layer="96" rot="R90" display="off"/>
+<attribute name="NAME" x="121.412" y="211.836" size="1.778" layer="95" rot="R180"/>
+<attribute name="VALUE" x="121.412" y="213.995" size="1.778" layer="96" rot="R180"/>
 </instance>
-<instance part="R3" gate="G$1" x="129.54" y="208.28">
+<instance part="R3" gate="G$1" x="129.54" y="208.28" smashed="yes">
 <attribute name="PARTNO" x="129.54" y="208.28" size="1.778" layer="96" display="off"/>
+<attribute name="NAME" x="129.54" y="209.7786" size="1.778" layer="95" align="bottom-center"/>
+<attribute name="VALUE" x="129.54" y="204.978" size="1.778" layer="96" align="bottom-center"/>
 </instance>
-<instance part="C2" gate="G$1" x="185.42" y="218.44" rot="MR0">
+<instance part="C2" gate="G$1" x="185.42" y="218.44" smashed="yes" rot="MR0">
 <attribute name="PARTNO" x="185.42" y="218.44" size="1.778" layer="96" rot="MR0" display="off"/>
+<attribute name="NAME" x="184.404" y="219.075" size="1.778" layer="95" rot="MR0"/>
+<attribute name="VALUE" x="184.404" y="214.249" size="1.778" layer="96" rot="MR0"/>
 </instance>
-<instance part="U3" gate="G$1" x="218.44" y="139.7"/>
-<instance part="J1" gate="G$1" x="48.26" y="215.9"/>
-<instance part="GND6" gate="1" x="50.8" y="198.12"/>
-<instance part="GND10" gate="1" x="274.32" y="127"/>
+<instance part="U3" gate="G$1" x="218.44" y="139.7" smashed="yes">
+<attribute name="NAME" x="198.12" y="170.18" size="1.778" layer="95" align="top-left"/>
+<attribute name="VALUE" x="238.76" y="101.6" size="1.778" layer="96" align="bottom-right"/>
+</instance>
+<instance part="J1" gate="G$1" x="48.26" y="215.9" smashed="yes">
+<attribute name="NAME" x="35.56" y="227.33" size="1.778" layer="95"/>
+<attribute name="VALUE" x="55.88" y="205.74" size="1.778" layer="96"/>
+</instance>
+<instance part="GND6" gate="1" x="50.8" y="198.12" smashed="yes">
+<attribute name="VALUE" x="48.26" y="195.58" size="1.778" layer="96"/>
+</instance>
+<instance part="GND10" gate="1" x="274.32" y="127" smashed="yes">
+<attribute name="VALUE" x="271.78" y="124.46" size="1.778" layer="96"/>
+</instance>
 <instance part="C7" gate="G$1" x="284.48" y="147.32" smashed="yes" rot="MR0">
 <attribute name="NAME" x="281.178" y="146.939" size="1.778" layer="95" rot="MR0"/>
 <attribute name="VALUE" x="281.178" y="144.907" size="1.778" layer="96" rot="MR0"/>
 <attribute name="PARTNO" x="284.48" y="147.32" size="1.778" layer="96" rot="MR0" display="off"/>
 </instance>
-<instance part="Y1" gate="G$1" x="160.02" y="157.48" rot="R270"/>
-<instance part="C5" gate="G$1" x="152.4" y="165.1" rot="R270"/>
-<instance part="C6" gate="G$1" x="152.4" y="149.86" rot="R270"/>
-<instance part="U1" gate="G$1" x="360.68" y="226.06"/>
-<instance part="GND15" gate="1" x="342.9" y="203.2"/>
+<instance part="Y1" gate="G$1" x="152.4" y="157.48" smashed="yes" rot="R270">
+<attribute name="NAME" x="157.48" y="165.1" size="1.27" layer="95" rot="R270" align="top-left"/>
+<attribute name="VALUE" x="147.32" y="149.86" size="1.27" layer="96" rot="R270" align="bottom-right"/>
+</instance>
+<instance part="C5" gate="G$1" x="144.78" y="165.1" smashed="yes" rot="R270">
+<attribute name="NAME" x="145.415" y="164.084" size="1.778" layer="95" rot="R270"/>
+<attribute name="VALUE" x="140.589" y="164.084" size="1.778" layer="96" rot="R270"/>
+</instance>
+<instance part="C6" gate="G$1" x="144.78" y="149.86" smashed="yes" rot="R270">
+<attribute name="NAME" x="145.415" y="148.844" size="1.778" layer="95" rot="R270"/>
+<attribute name="VALUE" x="140.589" y="148.844" size="1.778" layer="96" rot="R270"/>
+</instance>
+<instance part="U1" gate="G$1" x="360.68" y="226.06" smashed="yes">
+<attribute name="VALUE" x="350.52" y="218.44" size="1.778" layer="96"/>
+<attribute name="NAME" x="350.52" y="231.902" size="1.778" layer="95"/>
+</instance>
+<instance part="GND15" gate="1" x="342.9" y="203.2" smashed="yes">
+<attribute name="VALUE" x="340.36" y="200.66" size="1.778" layer="96"/>
+</instance>
 <instance part="C10" gate="G$1" x="147.32" y="99.06" smashed="yes" rot="MR0">
 <attribute name="NAME" x="144.018" y="98.679" size="1.778" layer="95" rot="MR0"/>
 <attribute name="VALUE" x="144.018" y="96.647" size="1.778" layer="96" rot="MR0"/>
@@ -12118,16 +12295,20 @@ Source: http://v4.cypress.com/cfuploads/img/products/cywusb6934.pdf</description
 <attribute name="VALUE" x="156.718" y="96.647" size="1.778" layer="96" rot="MR0"/>
 <attribute name="PARTNO" x="160.02" y="99.06" size="1.778" layer="96" rot="MR0" display="off"/>
 </instance>
-<instance part="J5" gate="G$1" x="48.26" y="154.94"/>
-<instance part="J4" gate="G$1" x="48.26" y="162.56"/>
+<instance part="J5" gate="G$1" x="48.26" y="154.94" smashed="yes">
+<attribute name="NAME" x="43.434" y="156.972" size="1.778" layer="96"/>
+</instance>
+<instance part="J4" gate="G$1" x="48.26" y="162.56" smashed="yes">
+<attribute name="NAME" x="43.434" y="164.592" size="1.778" layer="96"/>
+</instance>
 <instance part="VCC2" gate="VCC" x="274.32" y="170.18" smashed="yes">
 <attribute name="VALUE" x="276.86" y="172.72" size="1.778" layer="96" rot="R180"/>
 </instance>
 <instance part="VCC3" gate="VCC" x="43.18" y="109.22" smashed="yes">
 <attribute name="VALUE" x="45.72" y="111.76" size="1.778" layer="96" rot="R180"/>
 </instance>
-<instance part="VCC4" gate="VCC" x="170.18" y="170.18" smashed="yes">
-<attribute name="VALUE" x="172.72" y="172.72" size="1.778" layer="96" rot="R180"/>
+<instance part="VCC4" gate="VCC" x="162.56" y="170.18" smashed="yes">
+<attribute name="VALUE" x="165.1" y="172.72" size="1.778" layer="96" rot="R180"/>
 </instance>
 <instance part="VCC5" gate="VCC" x="121.92" y="109.22" smashed="yes">
 <attribute name="VALUE" x="124.46" y="111.76" size="1.778" layer="96" rot="R180"/>
@@ -12140,19 +12321,32 @@ Source: http://v4.cypress.com/cfuploads/img/products/cywusb6934.pdf</description
 <attribute name="NAME" x="334.772" y="220.599" size="1.778" layer="95" rot="MR0"/>
 <attribute name="VALUE" x="334.772" y="218.567" size="1.778" layer="96" rot="MR0"/>
 </instance>
-<instance part="J3" gate="G$1" x="243.84" y="215.9"/>
-<instance part="U4" gate="G$1" x="342.9" y="83.82"/>
-<instance part="C12" gate="G$1" x="312.42" y="86.36" smashed="yes" rot="MR0">
-<attribute name="NAME" x="309.118" y="85.979" size="1.778" layer="95" rot="MR0"/>
-<attribute name="VALUE" x="309.118" y="83.947" size="1.778" layer="96" rot="MR0"/>
-<attribute name="PARTNO" x="312.42" y="86.36" size="1.778" layer="96" rot="MR0" display="off"/>
+<instance part="J3" gate="G$1" x="243.84" y="215.9" smashed="yes">
+<attribute name="NAME" x="238.76" y="222.25" size="1.778" layer="95"/>
+<attribute name="VALUE" x="238.76" y="210.82" size="1.778" layer="96"/>
 </instance>
-<instance part="GND16" gate="1" x="325.12" y="68.58"/>
+<instance part="U4" gate="G$1" x="342.9" y="83.82" smashed="yes">
+<attribute name="VALUE" x="355.854" y="73.914" size="1.778" layer="96" align="bottom-right"/>
+<attribute name="NAME" x="332.74" y="94.488" size="1.778" layer="95"/>
+</instance>
+<instance part="C12" gate="G$1" x="302.26" y="86.36" smashed="yes" rot="MR0">
+<attribute name="NAME" x="298.958" y="85.979" size="1.778" layer="95" rot="MR0"/>
+<attribute name="VALUE" x="298.958" y="83.947" size="1.778" layer="96" rot="MR0"/>
+<attribute name="PARTNO" x="302.26" y="86.36" size="1.778" layer="96" rot="MR0" display="off"/>
+</instance>
+<instance part="GND16" gate="1" x="302.26" y="68.58" smashed="yes">
+<attribute name="VALUE" x="299.72" y="66.04" size="1.778" layer="96"/>
+</instance>
 <instance part="VCC7" gate="VCC" x="83.82" y="109.22" smashed="yes">
 <attribute name="VALUE" x="86.36" y="111.76" size="1.778" layer="96" rot="R180"/>
 </instance>
-<instance part="SW2" gate="G$1" x="190.5" y="81.28" rot="R270"/>
-<instance part="GND2" gate="1" x="200.66" y="76.2"/>
+<instance part="SW2" gate="G$1" x="190.5" y="81.28" smashed="yes" rot="R270">
+<attribute name="NAME" x="187.96" y="87.63" size="1.778" layer="95"/>
+<attribute name="VALUE" x="193.675" y="85.09" size="1.778" layer="96"/>
+</instance>
+<instance part="GND2" gate="1" x="200.66" y="76.2" smashed="yes">
+<attribute name="VALUE" x="198.12" y="73.66" size="1.778" layer="96"/>
+</instance>
 <instance part="R8" gate="G$1" x="261.62" y="81.28" smashed="yes" rot="R90">
 <attribute name="NAME" x="263.398" y="81.7626" size="1.778" layer="95"/>
 <attribute name="VALUE" x="263.398" y="79.248" size="1.778" layer="96"/>
@@ -12163,7 +12357,9 @@ Source: http://v4.cypress.com/cfuploads/img/products/cywusb6934.pdf</description
 <attribute name="VALUE" x="263.398" y="64.008" size="1.778" layer="96"/>
 <attribute name="PARTNO" x="261.62" y="66.04" size="1.778" layer="96" rot="R90" display="off"/>
 </instance>
-<instance part="J7" gate="G$1" x="294.64" y="55.88"/>
+<instance part="GND17" gate="1" x="261.62" y="55.88" smashed="yes">
+<attribute name="VALUE" x="259.08" y="53.34" size="1.778" layer="96"/>
+</instance>
 </instances>
 <busses>
 </busses>
@@ -12224,8 +12420,8 @@ Source: http://v4.cypress.com/cfuploads/img/products/cywusb6934.pdf</description
 </net>
 <net name="IO9" class="0">
 <segment>
-<wire x1="177.8" y1="137.16" x2="193.04" y2="137.16" width="0.1524" layer="91"/>
-<label x="180.34" y="137.414" size="1.778" layer="95"/>
+<wire x1="170.18" y1="137.16" x2="193.04" y2="137.16" width="0.1524" layer="91"/>
+<label x="172.72" y="137.414" size="1.778" layer="95"/>
 <pinref part="U3" gate="G$1" pin="PA07"/>
 </segment>
 <segment>
@@ -12236,8 +12432,8 @@ Source: http://v4.cypress.com/cfuploads/img/products/cywusb6934.pdf</description
 </net>
 <net name="IO8" class="0">
 <segment>
-<wire x1="177.8" y1="139.7" x2="193.04" y2="139.7" width="0.1524" layer="91"/>
-<label x="180.34" y="139.954" size="1.778" layer="95"/>
+<wire x1="170.18" y1="139.7" x2="193.04" y2="139.7" width="0.1524" layer="91"/>
+<label x="172.72" y="139.954" size="1.778" layer="95"/>
 <pinref part="U3" gate="G$1" pin="PA06"/>
 </segment>
 <segment>
@@ -12246,7 +12442,7 @@ Source: http://v4.cypress.com/cfuploads/img/products/cywusb6934.pdf</description
 <pinref part="J6" gate="G$1" pin="25"/>
 </segment>
 </net>
-<net name="AD5/SCL" class="0">
+<net name="SCL" class="0">
 <segment>
 <wire x1="327.66" y1="170.18" x2="314.96" y2="170.18" width="0.1524" layer="91"/>
 <label x="325.12" y="170.434" size="1.778" layer="95" rot="MR0"/>
@@ -12269,7 +12465,7 @@ Source: http://v4.cypress.com/cfuploads/img/products/cywusb6934.pdf</description
 <label x="368.3" y="78.74" size="1.778" layer="95"/>
 </segment>
 </net>
-<net name="AD4/SDA" class="0">
+<net name="SDA" class="0">
 <segment>
 <wire x1="327.66" y1="167.64" x2="314.96" y2="167.64" width="0.1524" layer="91"/>
 <label x="325.12" y="167.894" size="1.778" layer="95" rot="MR0"/>
@@ -12289,13 +12485,13 @@ Source: http://v4.cypress.com/cfuploads/img/products/cywusb6934.pdf</description
 <segment>
 <pinref part="U4" gate="G$1" pin="SDX"/>
 <wire x1="327.66" y1="81.28" x2="314.96" y2="81.28" width="0.1524" layer="91"/>
-<label x="317.5" y="81.28" size="1.778" layer="95"/>
+<label x="314.96" y="81.28" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="AD3" class="0">
 <segment>
-<wire x1="177.8" y1="144.78" x2="193.04" y2="144.78" width="0.1524" layer="91"/>
-<label x="180.34" y="145.034" size="1.778" layer="95"/>
+<wire x1="170.18" y1="144.78" x2="193.04" y2="144.78" width="0.1524" layer="91"/>
+<label x="172.72" y="145.034" size="1.778" layer="95"/>
 <pinref part="U3" gate="G$1" pin="PA04"/>
 </segment>
 <segment>
@@ -12306,8 +12502,8 @@ Source: http://v4.cypress.com/cfuploads/img/products/cywusb6934.pdf</description
 </net>
 <net name="AD2" class="0">
 <segment>
-<wire x1="177.8" y1="147.32" x2="193.04" y2="147.32" width="0.1524" layer="91"/>
-<label x="180.34" y="147.574" size="1.778" layer="95"/>
+<wire x1="170.18" y1="147.32" x2="193.04" y2="147.32" width="0.1524" layer="91"/>
+<label x="172.72" y="147.574" size="1.778" layer="95"/>
 <pinref part="U3" gate="G$1" pin="PB09"/>
 </segment>
 <segment>
@@ -12318,8 +12514,8 @@ Source: http://v4.cypress.com/cfuploads/img/products/cywusb6934.pdf</description
 </net>
 <net name="AD1" class="0">
 <segment>
-<wire x1="177.8" y1="149.86" x2="193.04" y2="149.86" width="0.1524" layer="91"/>
-<label x="180.34" y="150.114" size="1.778" layer="95"/>
+<wire x1="170.18" y1="149.86" x2="193.04" y2="149.86" width="0.1524" layer="91"/>
+<label x="172.72" y="150.114" size="1.778" layer="95"/>
 <pinref part="U3" gate="G$1" pin="PB08"/>
 </segment>
 <segment>
@@ -12330,8 +12526,8 @@ Source: http://v4.cypress.com/cfuploads/img/products/cywusb6934.pdf</description
 </net>
 <net name="AD0" class="0">
 <segment>
-<wire x1="177.8" y1="160.02" x2="193.04" y2="160.02" width="0.1524" layer="91"/>
-<label x="180.34" y="160.274" size="1.778" layer="95"/>
+<wire x1="170.18" y1="160.02" x2="193.04" y2="160.02" width="0.1524" layer="91"/>
+<label x="172.72" y="160.274" size="1.778" layer="95"/>
 <pinref part="U3" gate="G$1" pin="PA02"/>
 </segment>
 <segment>
@@ -12366,8 +12562,8 @@ Source: http://v4.cypress.com/cfuploads/img/products/cywusb6934.pdf</description
 </net>
 <net name="IO5" class="0">
 <segment>
-<wire x1="177.8" y1="106.68" x2="193.04" y2="106.68" width="0.1524" layer="91"/>
-<label x="180.34" y="106.934" size="1.778" layer="95"/>
+<wire x1="170.18" y1="106.68" x2="193.04" y2="106.68" width="0.1524" layer="91"/>
+<label x="172.72" y="106.934" size="1.778" layer="95"/>
 <pinref part="U3" gate="G$1" pin="PA15"/>
 </segment>
 <segment>
@@ -12383,15 +12579,15 @@ Source: http://v4.cypress.com/cfuploads/img/products/cywusb6934.pdf</description
 <label x="353.06" y="132.334" size="1.778" layer="95"/>
 </segment>
 <segment>
-<wire x1="177.8" y1="134.62" x2="193.04" y2="134.62" width="0.1524" layer="91"/>
-<label x="180.34" y="134.874" size="1.778" layer="95"/>
+<wire x1="170.18" y1="134.62" x2="193.04" y2="134.62" width="0.1524" layer="91"/>
+<label x="172.72" y="134.874" size="1.778" layer="95"/>
 <pinref part="U3" gate="G$1" pin="PA08"/>
 </segment>
 </net>
 <net name="IO3" class="0">
 <segment>
-<wire x1="177.8" y1="132.08" x2="193.04" y2="132.08" width="0.1524" layer="91"/>
-<label x="180.34" y="132.334" size="1.778" layer="95"/>
+<wire x1="170.18" y1="132.08" x2="193.04" y2="132.08" width="0.1524" layer="91"/>
+<label x="172.72" y="132.334" size="1.778" layer="95"/>
 <pinref part="U3" gate="G$1" pin="PA09"/>
 </segment>
 <segment>
@@ -12407,15 +12603,15 @@ Source: http://v4.cypress.com/cfuploads/img/products/cywusb6934.pdf</description
 <label x="353.06" y="137.414" size="1.778" layer="95"/>
 </segment>
 <segment>
-<wire x1="177.8" y1="109.22" x2="193.04" y2="109.22" width="0.1524" layer="91"/>
-<label x="180.34" y="109.474" size="1.778" layer="95"/>
+<wire x1="170.18" y1="109.22" x2="193.04" y2="109.22" width="0.1524" layer="91"/>
+<label x="172.72" y="109.474" size="1.778" layer="95"/>
 <pinref part="U3" gate="G$1" pin="PA14"/>
 </segment>
 </net>
 <net name="IO1" class="0">
 <segment>
-<wire x1="177.8" y1="129.54" x2="193.04" y2="129.54" width="0.1524" layer="91"/>
-<label x="180.34" y="129.794" size="1.778" layer="95"/>
+<wire x1="170.18" y1="129.54" x2="193.04" y2="129.54" width="0.1524" layer="91"/>
+<label x="172.72" y="129.794" size="1.778" layer="95"/>
 <pinref part="U3" gate="G$1" pin="PA10"/>
 </segment>
 <segment>
@@ -12426,8 +12622,8 @@ Source: http://v4.cypress.com/cfuploads/img/products/cywusb6934.pdf</description
 </net>
 <net name="IO0" class="0">
 <segment>
-<wire x1="177.8" y1="127" x2="193.04" y2="127" width="0.1524" layer="91"/>
-<label x="180.34" y="127.254" size="1.778" layer="95"/>
+<wire x1="170.18" y1="127" x2="193.04" y2="127" width="0.1524" layer="91"/>
+<label x="172.72" y="127.254" size="1.778" layer="95"/>
 <pinref part="U3" gate="G$1" pin="PA11"/>
 </segment>
 <segment>
@@ -12477,15 +12673,15 @@ Source: http://v4.cypress.com/cfuploads/img/products/cywusb6934.pdf</description
 <junction x="147.32" y="91.44"/>
 </segment>
 <segment>
-<wire x1="172.72" y1="121.92" x2="172.72" y2="119.38" width="0.1524" layer="91"/>
+<wire x1="165.1" y1="121.92" x2="165.1" y2="119.38" width="0.1524" layer="91"/>
 <pinref part="GND4" gate="1" pin="GND"/>
 <pinref part="U3" gate="G$1" pin="GND1"/>
-<wire x1="193.04" y1="121.92" x2="175.26" y2="121.92" width="0.1524" layer="91"/>
+<wire x1="193.04" y1="121.92" x2="167.64" y2="121.92" width="0.1524" layer="91"/>
 <pinref part="U3" gate="G$1" pin="GNDANA"/>
-<wire x1="175.26" y1="121.92" x2="172.72" y2="121.92" width="0.1524" layer="91"/>
-<wire x1="193.04" y1="154.94" x2="175.26" y2="154.94" width="0.1524" layer="91"/>
-<wire x1="175.26" y1="154.94" x2="175.26" y2="121.92" width="0.1524" layer="91"/>
-<junction x="175.26" y="121.92"/>
+<wire x1="167.64" y1="121.92" x2="165.1" y2="121.92" width="0.1524" layer="91"/>
+<wire x1="193.04" y1="154.94" x2="167.64" y2="154.94" width="0.1524" layer="91"/>
+<wire x1="167.64" y1="154.94" x2="167.64" y2="121.92" width="0.1524" layer="91"/>
+<junction x="167.64" y="121.92"/>
 </segment>
 <segment>
 <wire x1="274.32" y1="203.2" x2="274.32" y2="205.74" width="0.1524" layer="91"/>
@@ -12503,12 +12699,12 @@ Source: http://v4.cypress.com/cfuploads/img/products/cywusb6934.pdf</description
 <junction x="370.84" y="154.94"/>
 </segment>
 <segment>
-<wire x1="147.32" y1="142.24" x2="147.32" y2="149.86" width="0.1524" layer="91"/>
+<wire x1="139.7" y1="142.24" x2="139.7" y2="149.86" width="0.1524" layer="91"/>
 <pinref part="GND1" gate="1" pin="GND"/>
 <pinref part="C6" gate="G$1" pin="2"/>
 <pinref part="C5" gate="G$1" pin="2"/>
-<wire x1="147.32" y1="149.86" x2="147.32" y2="165.1" width="0.1524" layer="91"/>
-<junction x="147.32" y="149.86"/>
+<wire x1="139.7" y1="149.86" x2="139.7" y2="165.1" width="0.1524" layer="91"/>
+<junction x="139.7" y="149.86"/>
 </segment>
 <segment>
 <wire x1="103.632" y1="144.018" x2="103.632" y2="146.558" width="0.1524" layer="91"/>
@@ -12612,14 +12808,12 @@ Source: http://v4.cypress.com/cfuploads/img/products/cywusb6934.pdf</description
 <wire x1="363.22" y1="88.9" x2="363.22" y2="86.36" width="0.1524" layer="91"/>
 <pinref part="U4" gate="G$1" pin="GND"/>
 <wire x1="363.22" y1="86.36" x2="360.68" y2="86.36" width="0.1524" layer="91"/>
-<wire x1="325.12" y1="78.74" x2="325.12" y2="73.66" width="0.1524" layer="91"/>
-<wire x1="325.12" y1="73.66" x2="363.22" y2="73.66" width="0.1524" layer="91"/>
+<wire x1="302.26" y1="73.66" x2="363.22" y2="73.66" width="0.1524" layer="91"/>
 <wire x1="363.22" y1="73.66" x2="363.22" y2="86.36" width="0.1524" layer="91"/>
 <junction x="363.22" y="86.36"/>
-<wire x1="325.12" y1="73.66" x2="325.12" y2="71.12" width="0.1524" layer="91"/>
-<junction x="325.12" y="73.66"/>
-<wire x1="325.12" y1="78.74" x2="312.42" y2="78.74" width="0.1524" layer="91"/>
-<wire x1="312.42" y1="78.74" x2="312.42" y2="81.28" width="0.1524" layer="91"/>
+<wire x1="302.26" y1="73.66" x2="302.26" y2="71.12" width="0.1524" layer="91"/>
+<junction x="302.26" y="73.66"/>
+<wire x1="302.26" y1="73.66" x2="302.26" y2="81.28" width="0.1524" layer="91"/>
 <pinref part="C12" gate="G$1" pin="2"/>
 <pinref part="GND16" gate="1" pin="GND"/>
 </segment>
@@ -12629,6 +12823,16 @@ Source: http://v4.cypress.com/cfuploads/img/products/cywusb6934.pdf</description
 <pinref part="SW2" gate="G$1" pin="1"/>
 <wire x1="200.66" y1="81.28" x2="195.58" y2="81.28" width="0.1524" layer="91"/>
 </segment>
+<segment>
+<pinref part="SW1" gate="G$1" pin="3"/>
+<wire x1="304.8" y1="231.14" x2="297.18" y2="231.14" width="0.1524" layer="91"/>
+<label x="297.18" y="231.14" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="R9" gate="G$1" pin="1"/>
+<wire x1="261.62" y1="60.96" x2="261.62" y2="58.42" width="0.1524" layer="91"/>
+<pinref part="GND17" gate="1" pin="GND"/>
+</segment>
 </net>
 <net name="AREF" class="0">
 <segment>
@@ -12637,8 +12841,8 @@ Source: http://v4.cypress.com/cfuploads/img/products/cywusb6934.pdf</description
 <pinref part="J6" gate="G$1" pin="13"/>
 </segment>
 <segment>
-<wire x1="193.04" y1="157.48" x2="177.8" y2="157.48" width="0.1524" layer="91"/>
-<label x="180.34" y="157.734" size="1.778" layer="95"/>
+<wire x1="193.04" y1="157.48" x2="170.18" y2="157.48" width="0.1524" layer="91"/>
+<label x="172.72" y="157.734" size="1.778" layer="95"/>
 <pinref part="U3" gate="G$1" pin="PA03"/>
 </segment>
 </net>
@@ -12779,24 +12983,24 @@ Source: http://v4.cypress.com/cfuploads/img/products/cywusb6934.pdf</description
 </net>
 <net name="N$1" class="0">
 <segment>
-<wire x1="160.02" y1="165.1" x2="193.04" y2="165.1" width="0.1524" layer="91"/>
+<wire x1="152.4" y1="165.1" x2="193.04" y2="165.1" width="0.1524" layer="91"/>
 <pinref part="U3" gate="G$1" pin="PA00"/>
 <pinref part="Y1" gate="G$1" pin="1"/>
 <pinref part="C5" gate="G$1" pin="1"/>
-<wire x1="154.94" y1="165.1" x2="160.02" y2="165.1" width="0.1524" layer="91"/>
-<junction x="160.02" y="165.1"/>
+<wire x1="147.32" y1="165.1" x2="152.4" y2="165.1" width="0.1524" layer="91"/>
+<junction x="152.4" y="165.1"/>
 </segment>
 </net>
 <net name="N$3" class="0">
 <segment>
 <pinref part="U3" gate="G$1" pin="PA01"/>
-<wire x1="193.04" y1="162.56" x2="167.64" y2="162.56" width="0.1524" layer="91"/>
-<wire x1="167.64" y1="162.56" x2="167.64" y2="149.86" width="0.1524" layer="91"/>
-<wire x1="167.64" y1="149.86" x2="160.02" y2="149.86" width="0.1524" layer="91"/>
+<wire x1="193.04" y1="162.56" x2="160.02" y2="162.56" width="0.1524" layer="91"/>
+<wire x1="160.02" y1="162.56" x2="160.02" y2="149.86" width="0.1524" layer="91"/>
+<wire x1="160.02" y1="149.86" x2="152.4" y2="149.86" width="0.1524" layer="91"/>
 <pinref part="Y1" gate="G$1" pin="2"/>
 <pinref part="C6" gate="G$1" pin="1"/>
-<junction x="160.02" y="149.86"/>
-<wire x1="154.94" y1="149.86" x2="160.02" y2="149.86" width="0.1524" layer="91"/>
+<junction x="152.4" y="149.86"/>
+<wire x1="147.32" y1="149.86" x2="152.4" y2="149.86" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="USB_N" class="0">
@@ -12823,10 +13027,10 @@ Source: http://v4.cypress.com/cfuploads/img/products/cywusb6934.pdf</description
 <pinref part="J1" gate="G$1" pin="3"/>
 </segment>
 </net>
-<net name="AD4" class="0">
+<net name="AD4(VBATT_DIV)" class="0">
 <segment>
-<wire x1="177.8" y1="142.24" x2="193.04" y2="142.24" width="0.1524" layer="91"/>
-<label x="180.34" y="142.494" size="1.778" layer="95"/>
+<wire x1="170.18" y1="142.24" x2="193.04" y2="142.24" width="0.1524" layer="91"/>
+<label x="172.72" y="142.494" size="1.778" layer="95"/>
 <pinref part="U3" gate="G$1" pin="PA05"/>
 </segment>
 <segment>
@@ -12839,15 +13043,10 @@ Source: http://v4.cypress.com/cfuploads/img/products/cywusb6934.pdf</description
 <label x="266.7" y="73.66" size="1.778" layer="95"/>
 </segment>
 </net>
-<net name="AD5" class="0">
+<net name="AD5(BOOTLOADER)" class="0">
 <segment>
-<wire x1="243.84" y1="162.56" x2="259.08" y2="162.56" width="0.1524" layer="91"/>
-<label x="246.38" y="162.814" size="1.778" layer="95"/>
-<pinref part="U3" gate="G$1" pin="PB02"/>
-</segment>
-<segment>
-<wire x1="180.34" y1="81.28" x2="185.42" y2="81.28" width="0.1524" layer="91"/>
-<label x="180.34" y="81.28" size="1.778" layer="95"/>
+<wire x1="160.02" y1="81.28" x2="185.42" y2="81.28" width="0.1524" layer="91"/>
+<label x="160.02" y="81.28" size="1.778" layer="95"/>
 <pinref part="SW2" gate="G$1" pin="2"/>
 </segment>
 </net>
@@ -12861,20 +13060,9 @@ Source: http://v4.cypress.com/cfuploads/img/products/cywusb6934.pdf</description
 </net>
 <net name="SWDIO" class="0">
 <segment>
-<wire x1="243.84" y1="160.02" x2="259.08" y2="160.02" width="0.1524" layer="91"/>
-<label x="246.38" y="160.274" size="1.778" layer="95"/>
-<pinref part="U3" gate="G$1" pin="PA31"/>
-</segment>
-<segment>
 <wire x1="350.52" y1="149.86" x2="363.22" y2="149.86" width="0.1524" layer="91"/>
 <label x="353.06" y="150.114" size="1.778" layer="95"/>
 <pinref part="J6" gate="G$1" pin="18"/>
-</segment>
-<segment>
-<pinref part="R9" gate="G$1" pin="1"/>
-<wire x1="261.62" y1="60.96" x2="261.62" y2="58.42" width="0.1524" layer="91"/>
-<wire x1="261.62" y1="58.42" x2="274.32" y2="58.42" width="0.1524" layer="91"/>
-<label x="266.7" y="58.42" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="SWCLK" class="0">
@@ -12887,27 +13075,6 @@ Source: http://v4.cypress.com/cfuploads/img/products/cywusb6934.pdf</description
 <pinref part="J6" gate="G$1" pin="20"/>
 <wire x1="350.52" y1="147.32" x2="363.22" y2="147.32" width="0.1524" layer="91"/>
 <label x="353.06" y="147.574" size="1.778" layer="95"/>
-</segment>
-</net>
-<net name="USB_HOST_EN/IO27" class="0">
-<segment>
-<wire x1="243.84" y1="147.32" x2="259.08" y2="147.32" width="0.1524" layer="91"/>
-<label x="246.38" y="147.574" size="1.778" layer="95"/>
-<pinref part="U3" gate="G$1" pin="PA28"/>
-</segment>
-</net>
-<net name="RX_LED/IO27/AIN11" class="0">
-<segment>
-<wire x1="243.84" y1="165.1" x2="259.08" y2="165.1" width="0.1524" layer="91"/>
-<label x="246.38" y="165.354" size="1.778" layer="95"/>
-<pinref part="U3" gate="G$1" pin="PB03"/>
-</segment>
-</net>
-<net name="TX_LED/IO26" class="0">
-<segment>
-<wire x1="243.84" y1="142.24" x2="259.08" y2="142.24" width="0.1524" layer="91"/>
-<label x="246.38" y="142.494" size="1.778" layer="95"/>
-<pinref part="U3" gate="G$1" pin="PA27"/>
 </segment>
 </net>
 <net name="DBG_RXD" class="0">
@@ -12932,34 +13099,6 @@ Source: http://v4.cypress.com/cfuploads/img/products/cywusb6934.pdf</description
 <wire x1="60.96" y1="154.94" x2="48.26" y2="154.94" width="0.1524" layer="91"/>
 <label x="50.8" y="155.194" size="1.778" layer="95"/>
 <pinref part="J5" gate="G$1" pin="1"/>
-</segment>
-</net>
-<net name="MOSI_ALT" class="0">
-<segment>
-<wire x1="177.8" y1="119.38" x2="193.04" y2="119.38" width="0.1524" layer="91"/>
-<label x="180.34" y="119.634" size="1.778" layer="95"/>
-<pinref part="U3" gate="G$1" pin="PB10"/>
-</segment>
-</net>
-<net name="SCK_ALT" class="0">
-<segment>
-<wire x1="177.8" y1="116.84" x2="193.04" y2="116.84" width="0.1524" layer="91"/>
-<label x="180.34" y="117.094" size="1.778" layer="95"/>
-<pinref part="U3" gate="G$1" pin="PB11"/>
-</segment>
-</net>
-<net name="MISO_ALT" class="0">
-<segment>
-<wire x1="177.8" y1="114.3" x2="193.04" y2="114.3" width="0.1524" layer="91"/>
-<label x="180.34" y="114.554" size="1.778" layer="95"/>
-<pinref part="U3" gate="G$1" pin="PA12"/>
-</segment>
-</net>
-<net name="ATN/IO38" class="0">
-<segment>
-<wire x1="177.8" y1="111.76" x2="193.04" y2="111.76" width="0.1524" layer="91"/>
-<label x="180.34" y="112.014" size="1.778" layer="95"/>
-<pinref part="U3" gate="G$1" pin="PA13"/>
 </segment>
 </net>
 <net name="VCC" class="0">
@@ -13008,12 +13147,12 @@ Source: http://v4.cypress.com/cfuploads/img/products/cywusb6934.pdf</description
 </segment>
 <segment>
 <pinref part="U3" gate="G$1" pin="VDDIO1"/>
-<wire x1="193.04" y1="124.46" x2="170.18" y2="124.46" width="0.1524" layer="91"/>
-<wire x1="170.18" y1="124.46" x2="170.18" y2="152.4" width="0.1524" layer="91"/>
-<wire x1="170.18" y1="152.4" x2="170.18" y2="167.64" width="0.1524" layer="91"/>
-<junction x="170.18" y="152.4"/>
+<wire x1="193.04" y1="124.46" x2="162.56" y2="124.46" width="0.1524" layer="91"/>
+<wire x1="162.56" y1="124.46" x2="162.56" y2="152.4" width="0.1524" layer="91"/>
+<wire x1="162.56" y1="152.4" x2="162.56" y2="167.64" width="0.1524" layer="91"/>
+<junction x="162.56" y="152.4"/>
 <pinref part="U3" gate="G$1" pin="VDDANA"/>
-<wire x1="193.04" y1="152.4" x2="170.18" y2="152.4" width="0.1524" layer="91"/>
+<wire x1="193.04" y1="152.4" x2="162.56" y2="152.4" width="0.1524" layer="91"/>
 <pinref part="VCC4" gate="VCC" pin="VCC"/>
 </segment>
 <segment>
@@ -13045,17 +13184,21 @@ Source: http://v4.cypress.com/cfuploads/img/products/cywusb6934.pdf</description
 <wire x1="365.76" y1="91.44" x2="360.68" y2="91.44" width="0.1524" layer="91"/>
 <wire x1="365.76" y1="91.44" x2="365.76" y2="96.52" width="0.1524" layer="91"/>
 <junction x="365.76" y="91.44"/>
-<wire x1="365.76" y1="96.52" x2="325.12" y2="96.52" width="0.1524" layer="91"/>
+<wire x1="365.76" y1="96.52" x2="312.42" y2="96.52" width="0.1524" layer="91"/>
 <pinref part="U4" gate="G$1" pin="VDDIO"/>
-<wire x1="325.12" y1="96.52" x2="312.42" y2="96.52" width="0.1524" layer="91"/>
-<wire x1="327.66" y1="83.82" x2="325.12" y2="83.82" width="0.1524" layer="91"/>
-<wire x1="325.12" y1="83.82" x2="325.12" y2="96.52" width="0.1524" layer="91"/>
-<junction x="325.12" y="96.52"/>
-<pinref part="C12" gate="G$1" pin="1"/>
-<wire x1="312.42" y1="96.52" x2="312.42" y2="88.9" width="0.1524" layer="91"/>
+<wire x1="312.42" y1="96.52" x2="302.26" y2="96.52" width="0.1524" layer="91"/>
+<wire x1="327.66" y1="83.82" x2="312.42" y2="83.82" width="0.1524" layer="91"/>
+<wire x1="312.42" y1="83.82" x2="312.42" y2="96.52" width="0.1524" layer="91"/>
 <junction x="312.42" y="96.52"/>
-<wire x1="312.42" y1="96.52" x2="304.8" y2="96.52" width="0.1524" layer="91"/>
-<label x="304.8" y="96.52" size="1.778" layer="95"/>
+<pinref part="C12" gate="G$1" pin="1"/>
+<wire x1="302.26" y1="96.52" x2="302.26" y2="88.9" width="0.1524" layer="91"/>
+<junction x="302.26" y="96.52"/>
+<wire x1="302.26" y1="96.52" x2="294.64" y2="96.52" width="0.1524" layer="91"/>
+<label x="294.64" y="96.52" size="1.778" layer="95"/>
+<pinref part="U4" gate="G$1" pin="SDO"/>
+<wire x1="327.66" y1="78.74" x2="312.42" y2="78.74" width="0.1524" layer="91"/>
+<wire x1="312.42" y1="78.74" x2="312.42" y2="83.82" width="0.1524" layer="91"/>
+<junction x="312.42" y="83.82"/>
 </segment>
 </net>
 <net name="VCC_IN" class="0">
@@ -13085,19 +13228,25 @@ Source: http://v4.cypress.com/cfuploads/img/products/cywusb6934.pdf</description
 <net name="N$13" class="0">
 <segment>
 <pinref part="U4" gate="G$1" pin="INT2"/>
-<wire x1="327.66" y1="91.44" x2="317.5" y2="91.44" width="0.1524" layer="91"/>
+<wire x1="327.66" y1="91.44" x2="325.12" y2="91.44" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="INT1" class="0">
 <segment>
 <pinref part="U4" gate="G$1" pin="INT1"/>
-<wire x1="327.66" y1="88.9" x2="317.5" y2="88.9" width="0.1524" layer="91"/>
-<label x="317.5" y="88.9" size="1.778" layer="95"/>
+<wire x1="327.66" y1="88.9" x2="314.96" y2="88.9" width="0.1524" layer="91"/>
+<label x="314.96" y="88.9" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="J7" gate="G$1" pin="1"/>
-<wire x1="294.64" y1="55.88" x2="304.8" y2="55.88" width="0.1524" layer="91"/>
-<label x="297.18" y="55.88" size="1.778" layer="95"/>
+<wire x1="60.96" y1="147.32" x2="48.26" y2="147.32" width="0.1524" layer="91"/>
+<label x="50.8" y="147.574" size="1.778" layer="95"/>
+</segment>
+</net>
+<net name="AD5(BOOT_SW)" class="0">
+<segment>
+<wire x1="243.84" y1="162.56" x2="259.08" y2="162.56" width="0.1524" layer="91"/>
+<label x="246.38" y="162.814" size="1.778" layer="95"/>
+<pinref part="U3" gate="G$1" pin="PB02"/>
 </segment>
 </net>
 </nets>
